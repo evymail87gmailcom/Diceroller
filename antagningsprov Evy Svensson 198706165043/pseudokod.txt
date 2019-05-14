@@ -1,0 +1,50 @@
+Tärningssimulator-Pseudokod
+
+1. - Start
+ 	-Text visas över skärmen med "Evy Svensson". Dialogruta? Eller fönster med text i? Square?
+
+Initiera "antalvarv"
+
+2. - Dialogruta
+	2.1 - Text "Välj mellan 1-4 tärningar som skall kastas" 
+	2.2 - Input i dialogrutan av heltalstyp av siffrorna 1,2,3 eller fyra.
+		2.2.1- Övrig input leder till dialogruta med text " Vill du avsluta spelet?" (JOptionpane YES/NO)
+			OM Ja- Gå tillbaka till 2.1
+			OM Nej- Avsluta program (BREAK)
+			OM NULL- Avsluta program (BREAK)	
+
+3. - Loop (räknare 1 startar?) Initiera variabler
+	3.1 - Variabeln "antalvarv" läser in en INT från 2.2 vilket anger hur många gånger tärningen skall kastas.
+	3.2 - till variabeln "summa" adderas reultatet från varje varv	
+	3.3 - till variabeln "antalkast" adderas hur många varv som gjorts.	
+		
+
+
+
+
+Villkor:  (while) så länge "antalvarv" är sant (while = antalvarv > 0 )
+
+	4. - Tärning
+		- Tärningen kastas
+
+
+	5. - Resultat 1 
+		- Uppstår när tärningen kastats 1 varv
+		-Initiera variabel "x" som refererar till den slumpmässiga summan 
+		- Den slumpmässiga summan avläses 
+		
+			- OM summan (x) är lika med == 6 skall Dialogruta med TEXTEN " Dubbelslag!" visas i 3 sekunder 
+				- Den avlästa summan får ej adderas med 3.2
+				- ytterligare 2 adderas till variabeln "antal varv", 3.1
+			
+			- ANNARS är summan mindre än 6 och Dialogruta visas med texten (" Tärningen slog: ", 'x') och på nästa rad ("Antal gjorda kast: ", 3.3 (antalkast))  i 5 sek
+				- x adderas till "summa". 
+
+Villkor: "antalvarv" slutar vara sant (while == 0)
+
+	6. Dialogruta
+		- Rad 1 visas med Texten ("Total summa: ", summa), 
+		- Rad 2 visas med Texten ("Totalt antal kast: ", antalkast),
+		- Rad 3 visas med Texten ("Vill du fortsätta? YES/NO)
+			OM Ja- Gå tillbaka till 2.1
+    			OM Nej- Avsluta program (BREAK)
